@@ -7,6 +7,8 @@ Scripts for simple stop motion animation (or really, any kind of animated gif as
 
 Install [ImageMagick](https://imagemagick.org/index.php), then clone this repo. (I suggest forking first.)
 
+![Pomelo](result-gifs/pomelo.gif)
+
 # Usage
 
 `format.sh` is for formatting your images to get them ready to put together into an animated gif. You can skip this if you don't need to crop or resize. It pulls parameters from environment variables. Example of use:

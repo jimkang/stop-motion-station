@@ -5,11 +5,14 @@
 
 mkdir -p "${dest}"
 
-for file in ${src}/*.jpg
+i=0
 
+for file in `ls -tr ${src}/*.jpg`
 do
-    basename="${file##*/}"
+    basename="`printf "%03d" $i`0-${file##*/}"
+    #echo "$basename"
     convert -crop "${cropsize}+${cropcorner}" -resize "${targetsize}" "${file}" "${dest}/${basename}"
+    let i=${i}+1
 done
 
 # The MIT License (MIT)
